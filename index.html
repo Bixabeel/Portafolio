@@ -1,0 +1,737 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sebastián Carabaguíaz — Creative Technologist. Infraestructura cognitiva, IA aplicada y sistemas de producto." />
+  <title>Sebastián Carabaguíaz — Creative Technologist</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body data-scroll-container>
+
+  <!-- ============================================
+       NAVIGATION (minimal, contextual)
+  ============================================= -->
+  <nav class="nav" aria-label="Navegación principal">
+    <div class="nav__logo">
+      <span class="nav__logo-mark"></span>
+      <span class="nav__logo-text">S.C.</span>
+    </div>
+    <button class="nav__menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span class="nav__menu-line"></span>
+      <span class="nav__menu-line"></span>
+    </button>
+  </nav>
+
+  <!-- Fullscreen menu -->
+  <div class="nav-menu" aria-hidden="true">
+    <div class="nav-menu__inner">
+      <ol class="nav-menu__list">
+        <li><a href="#manifiesto" class="nav-menu__link" data-scene="01"><span>01</span>Manifiesto</a></li>
+        <li><a href="#sustratos" class="nav-menu__link" data-scene="02"><span>02</span>Sustratos</a></li>
+        <li><a href="#research" class="nav-menu__link" data-scene="03"><span>03</span>Research Initiative</a></li>
+        <li><a href="#produccion" class="nav-menu__link" data-scene="04"><span>04</span>Producción</a></li>
+        <li><a href="#media" class="nav-menu__link" data-scene="05"><span>05</span>Media Hub</a></li>
+        <li><a href="#metodo" class="nav-menu__link" data-scene="06"><span>06</span>Método</a></li>
+        <li><a href="#contacto" class="nav-menu__link" data-scene="07"><span>07</span>Correspondencia</a></li>
+      </ol>
+      <div class="nav-menu__footer">
+        <span>sebastian@abundia.io</span>
+        <span>v. 2026.08</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Progress indicator -->
+  <div class="progress" aria-hidden="true">
+    <div class="progress__bar"></div>
+    <span class="progress__label">01 — Manifiesto</span>
+  </div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+    <div class="cursor__label"></div>
+  </div>
+
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============================================
+       SCENE 00 — UMBRAL
+  ============================================= -->
+  <section id="umbral" class="scene scene--umbral" data-scene-name="00 — Umbral">
+    <div class="umbral__inner">
+      <div class="umbral__terminal" aria-live="polite">
+        <div class="umbral__line"><span class="umbral__prompt">&gt;</span><span class="umbral__text">initializing substrate...</span></div>
+        <div class="umbral__line"><span class="umbral__prompt">&gt;</span><span class="umbral__text">loading memory layers...</span></div>
+        <div class="umbral__line"><span class="umbral__prompt">&gt;</span><span class="umbral__text">connecting cognitive infrastructure...</span></div>
+        <div class="umbral__line"><span class="umbral__prompt">&gt;</span><span class="umbral__text" data-typed="6 systems detected">6 systems detected</span></div>
+        <div class="umbral__line umbral__line--cursor"><span class="umbral__prompt">&gt;</span><span class="umbral__cursor">_</span></div>
+      </div>
+      <div class="umbral__hint">
+        <span>scroll para entrar</span>
+        <span class="umbral__hint-arrow">↓</span>
+      </div>
+    </div>
+    <canvas class="umbral__canvas" aria-hidden="true"></canvas>
+  </section>
+
+  <!-- ============================================
+       SCENE 01 — MANIFIESTO
+  ============================================= -->
+  <section id="manifiesto" class="scene scene--manifiesto" data-scene-name="01 — Manifiesto">
+    <div class="manifiesto__inner">
+      <div class="manifiesto__label">
+        <span>01</span>
+        <span class="manifiesto__label-line"></span>
+        <span>MANIFIESTO</span>
+      </div>
+
+      <h1 class="manifiesto__headline" data-split>
+        Diseñar infraestructura cognitiva. Construir sistemas que recuerdan, razonan y evolucionan con el tiempo.
+      </h1>
+
+      <div class="manifiesto__meta">
+        <div class="manifiesto__meta-row">
+          <span class="manifiesto__meta-label">Nombre</span>
+          <span class="manifiesto__meta-value">Sebastián Carabaguíaz</span>
+        </div>
+        <div class="manifiesto__meta-row">
+          <span class="manifiesto__meta-label">Rol</span>
+          <span class="manifiesto__meta-value">Creative Technologist</span>
+        </div>
+        <div class="manifiesto__meta-row">
+          <span class="manifiesto__meta-label">Dominio</span>
+          <span class="manifiesto__meta-value">IA aplicada · Arquitectura de producto · Dirección creativa</span>
+        </div>
+        <div class="manifiesto__meta-row">
+          <span class="manifiesto__meta-label">Sede</span>
+          <span class="manifiesto__meta-value">Abundia.io · Operando globalmente</span>
+        </div>
+      </div>
+
+      <p class="manifiesto__statement" data-split>
+        Opero en la intersección entre inteligencia artificial aplicada, arquitectura de producto y dirección creativa. Cada entrega no es un producto terminado: es una capa de sustrato sobre la que otros sistemas pueden operar, escalar y evolucionar.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SCENE 02 — LOS SUSTRATOS
+  ============================================= -->
+  <section id="sustratos" class="scene scene--sustratos" data-scene-name="02 — Sustratos">
+    <div class="sustratos__inner">
+      <div class="sustratos__header">
+        <span class="sustratos__number">02</span>
+        <h2 class="sustratos__title" data-split>Tres principios estructurales.</h2>
+        <p class="sustratos__subtitle">Propiedades del sustrato. No features.</p>
+      </div>
+
+      <div class="sustratos__grid">
+        <article class="substrato" data-color="#d4a85c">
+          <div class="substrato__index">I</div>
+          <h3 class="substrato__title">Memoria persistente</h3>
+          <p class="substrato__statement">Los sistemas olvidan. Los míos no.</p>
+          <p class="substrato__body">Estructuras de conocimiento que sobreviven al personal, al tiempo y a las reescrituras técnicas. Cada decisión, cada proceso, cada aprendizaje permanece indexado y recuperable con su contexto original.</p>
+          <div class="substrato__diagram" aria-hidden="true">
+            <svg viewBox="0 0 200 200">
+              <circle cx="50" cy="100" r="4" /><circle cx="100" cy="50" r="4" /><circle cx="150" cy="100" r="4" /><circle cx="100" cy="150" r="4" />
+              <path d="M50 100 L100 50 L150 100 L100 150 Z" fill="none" stroke="currentColor" stroke-width="0.5" />
+              <path d="M50 100 L150 100 M100 50 L100 150" fill="none" stroke="currentColor" stroke-width="0.3" stroke-dasharray="2,2" />
+            </svg>
+          </div>
+        </article>
+
+        <article class="substrato" data-color="#7a8c6e">
+          <div class="substrato__index">II</div>
+          <h3 class="substrato__title">Ética por diseño</h3>
+          <p class="substrato__statement">Proteger sin invadir. Acompañar sin controlar.</p>
+          <p class="substrato__body">Privacidad, explicabilidad y gobernanza humana son propiedades estructurales del sistema, no features agregadas. Cada decisión autónoma lleva trazabilidad criptográfica y puede ser revertida por un humano.</p>
+          <div class="substrato__diagram" aria-hidden="true">
+            <svg viewBox="0 0 200 200">
+              <path d="M100 30 L160 60 L160 130 Q160 170 100 180 Q40 170 40 130 L40 60 Z" fill="none" stroke="currentColor" stroke-width="0.8" />
+              <circle cx="100" cy="110" r="20" fill="none" stroke="currentColor" stroke-width="0.5" />
+              <circle cx="100" cy="110" r="8" fill="currentColor" />
+            </svg>
+          </div>
+        </article>
+
+        <article class="substrato" data-color="#2d4a6f">
+          <div class="substrato__index">III</div>
+          <h3 class="substrato__title">Sistemas, no productos</h3>
+          <p class="substrato__statement">Cada entrega es una capa de infraestructura.</p>
+          <p class="substrato__body">No construyo apps. Construyo sustratos sobre los que pueden operar clínicas, organizaciones, familias y equipos. El valor se mide en cuántos sistemas dependientes pueden evolucionar sin reescribir la base.</p>
+          <div class="substrato__diagram" aria-hidden="true">
+            <svg viewBox="0 0 200 200">
+              <rect x="40" y="40" width="120" height="20" fill="none" stroke="currentColor" stroke-width="0.5" />
+              <rect x="40" y="70" width="120" height="20" fill="none" stroke="currentColor" stroke-width="0.5" />
+              <rect x="40" y="100" width="120" height="20" fill="none" stroke="currentColor" stroke-width="0.5" />
+              <rect x="40" y="130" width="120" height="20" fill="none" stroke="currentColor" stroke-width="0.5" />
+              <line x1="20" y1="20" x2="20" y2="180" stroke="currentColor" stroke-width="0.3" />
+            </svg>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SCENE 03 — RESEARCH INITIATIVE
+  ============================================= -->
+  <section id="research" class="scene scene--research" data-scene-name="03 — Research Initiative">
+    <div class="research__intro">
+      <span class="research__tag">Research Initiative · 2024 — presente</span>
+      <h2 class="research__title" data-split>Cinco investigaciones activas. Ningún proyecto cerrado.</h2>
+      <p class="research__lead">Esta sección no muestra productos terminados. Documenta trayectorias de investigación donde cada fase aborda un riesgo tecnológico específico. Nada está marcado como completo; todo permanece activo.</p>
+    </div>
+
+    <!-- ETERNA — buque insignia -->
+    <article class="project project--flagship" id="eterna" data-color="#d4a85c">
+      <div class="project__header">
+        <div class="project__meta">
+          <span class="project__index">03.01</span>
+          <span class="project__status"><span class="project__status-dot"></span>Research activa</span>
+        </div>
+        <h3 class="project__name">ETERNA</h3>
+        <p class="project__tagline">The Cognitive Infrastructure for Organizations That Learn</p>
+      </div>
+
+      <div class="project__hero">
+        <div class="project__image-frame">
+          <div class="project__image" data-src="assets/img/scenes/03-research/eterna/hero.jpg" style="background: linear-gradient(135deg, #1a1410 0%, #3d2e1a 50%, #0a0a0c 100%);">
+            <span class="project__image-placeholder"><img src="assets/img/scenes/03-research/eterna/eterna.png" alt="Arquitectura cognitiva ETERNA" class="project__image" loading="lazy"></span>
+          </div>
+        </div>
+        <blockquote class="project__quote">
+          "Time forgets. ETERNA remembers."
+        </blockquote>
+      </div>
+
+      <div class="project__body">
+        <div class="project__column">
+          <h4 class="project__section-title">El problema</h4>
+          <p>Las organizaciones generan inteligencia cada día pero rara vez la preservan. El conocimiento queda atrapado en documentos, conversaciones, experiencia personal y sistemas desconectados. El problema no es falta de información: es falta de memoria institucional persistente.</p>
+        </div>
+        <div class="project__column">
+          <h4 class="project__section-title">La hipótesis</h4>
+          <p>ETERNA investiga una nueva generación de inteligencia organizacional: una infraestructura cognitiva persistente diseñada para que las organizaciones recuerden, razonen y evolucionen con el tiempo. Más allá de asistentes de IA: un sustrato que preserva memoria, coordina agentes especializados y modela la evolución organizacional.</p>
+        </div>
+      </div>
+
+      <div class="project__layers">
+        <div class="project__layer" data-color="#d4a85c">
+          <div class="project__layer-index">01</div>
+          <div class="project__layer-content">
+            <h5>Memoria persistente</h5>
+            <p>Un sustrato de conocimiento diseñado para conectar eventos, decisiones y contexto operacional a través del tiempo.</p>
+            <div class="project__tech">
+              <span>PostgreSQL</span><span>pgvector</span><span>Neo4j</span>
+            </div>
+          </div>
+        </div>
+        <div class="project__layer" data-color="#c19a4e">
+          <div class="project__layer-index">02</div>
+          <div class="project__layer-content">
+            <h5>Coordinación de agentes</h5>
+            <p>Ecosistema de agentes de IA especializados que colaboran, razonan y ejecutan dentro de límites de gobernanza definidos.</p>
+            <div class="project__tech">
+              <span>LangGraph</span><span>MCP</span><span>A2A</span><span>FastAPI</span>
+            </div>
+          </div>
+        </div>
+        <div class="project__layer" data-color="#a88556">
+          <div class="project__layer-index">03</div>
+          <div class="project__layer-content">
+            <h5>Gobernanza</h5>
+            <p>Supervisión humana, aplicación de políticas y mecanismos de trazabilidad criptográfica sobre cada acción autónoma.</p>
+            <div class="project__tech">
+              <span>OPA</span><span>SPIFFE/SPIRE</span><span>Kubernetes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project__phases">
+        <h4 class="project__section-title">Trayectoria evolutiva</h4>
+        <div class="project__phases-list">
+          <div class="phase">
+            <span class="phase__num">01</span>
+            <h5>Principios fundacionales</h5>
+            <p>Marco conceptual, principios de inteligencia y límites de gobernanza para sistemas cognitivos organizacionales.</p>
+            <span class="phase__risk">Riesgo: decisiones arquitectónicas impulsadas por hype en lugar de principio.</span>
+          </div>
+          <div class="phase">
+            <span class="phase__num">02</span>
+            <h5>Fundación técnica</h5>
+            <p>Infraestructura para memoria persistente y coordinación de agentes en entornos controlados.</p>
+            <span class="phase__risk">Riesgo: si las herramientas actuales soportan requisitos de latencia y consistencia a escala organizacional.</span>
+          </div>
+          <div class="phase">
+            <span class="phase__num">03</span>
+            <h5>Arquitectura de memoria</h5>
+            <p>Métodos para almacenar, recuperar y evolucionar conocimiento sin pérdida de información ni degradación de contexto.</p>
+            <span class="phase__risk">Riesgo: cómo el conocimiento decae, cómo manejar información conflictiva, cómo mantener coherencia al escalar.</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- HealthVision -->
+    <article class="project" id="healthvision" data-color="#c9483d">
+      <div class="project__header">
+        <div class="project__meta">
+          <span class="project__index">03.02</span>
+          <span class="project__status"><span class="project__status-dot"></span>Desarrollo activo</span>
+        </div>
+        <h3 class="project__name">HealthVision®</h3>
+        <p class="project__tagline">Plataforma empresarial de análisis de imágenes médicas con IA explicable</p>
+      </div>
+
+      <div class="project__hero">
+        <div class="project__image-frame">
+          <div class="project__image" data-src="assets/img/scenes/03-research/healthvision/hero.jpg" style="background: linear-gradient(135deg, #1a0a08 0%, #3d1510 50%, #0a0a0c 100%);">
+            <span class="project__image-placeholder"><img src="assets/img/scenes/03-research/healthvision/healthvision.png" alt="HealthVision GradCAM overlay" class="project__image" loading="lazy"></span>
+          </div>
+        </div>
+        <blockquote class="project__quote">
+          "No basta con una predicción. La confianza clínica exige ver qué miró el modelo."
+        </blockquote>
+      </div>
+
+      <div class="project__body">
+        <div class="project__column">
+          <h4 class="project__section-title">Qué es</h4>
+          <p>Un sistema completo de producción — no un modelo aislado ni un notebook experimental. Integra API, procesamiento asíncrono, motor de inferencia, persistencia, observabilidad, versionado de modelos y cumplimiento normativo. Diseñado para integrarse en flujos de trabajo reales de hospitales, clínicas e instituciones de salud.</p>
+        </div>
+        <div class="project__column">
+          <h4 class="project__section-title">Pipeline</h4>
+          <p>Diez etapas desde el upload DICOM hasta la notificación al frontend: validación estructural, anonimización PHI según PS3.15, cifrado AES-256, preprocesamiento VOI LUT, inferencia en servidor dedicado (TorchServe/Triton), generación de mapas GradCAM, reportes estructurados y persistencia en object storage cifrado.</p>
+        </div>
+      </div>
+
+      <div class="project__pipeline" aria-label="Pipeline de 10 etapas">
+        <div class="pipeline__stage"><span>01</span>Upload</div>
+        <div class="pipeline__stage"><span>02</span>Validate</div>
+        <div class="pipeline__stage"><span>03</span>Anonymize</div>
+        <div class="pipeline__stage"><span>04</span>Store</div>
+        <div class="pipeline__stage"><span>05</span>Preprocess</div>
+        <div class="pipeline__stage"><span>06</span>Inference</div>
+        <div class="pipeline__stage"><span>07</span>GradCAM</div>
+        <div class="pipeline__stage"><span>08</span>Report</div>
+        <div class="pipeline__stage"><span>09</span>Persist</div>
+        <div class="pipeline__stage"><span>10</span>Notify</div>
+      </div>
+
+      <div class="project__compliance">
+        <span class="compliance__badge">GDPR</span>
+        <span class="compliance__badge">HIPAA</span>
+        <span class="compliance__badge">ISO 27001</span>
+        <span class="compliance__badge">DICOM PS3.15</span>
+        <span class="compliance__badge">SOC 2</span>
+      </div>
+    </article>
+
+    <!-- Open Eye -->
+    <article class="project" id="openeye" data-color="#2d4a6f">
+      <div class="project__header">
+        <div class="project__meta">
+          <span class="project__index">03.03</span>
+          <span class="project__status"><span class="project__status-dot"></span>Horizonte 2035</span>
+        </div>
+        <h3 class="project__name">Open Eye</h3>
+        <p class="project__tagline">Adaptive Protective Intelligence · Una capa inmunológica para la infancia digital</p>
+      </div>
+
+      <div class="project__hero">
+        <div class="project__image-frame">
+          <div class="project__image" data-src="assets/img/scenes/03-research/open-eye/hero.jpg" style="background: linear-gradient(135deg, #0a1420 0%, #1a2f4a 50%, #0a0a0c 100%);">
+            <span class="project__image-placeholder"><img src="assets/img/scenes/03-research/openeye/openeye.png" alt="Open Eye arquitectura edge-first" class="project__image" loading="lazy"></span>
+          </div>
+        </div>
+        <blockquote class="project__quote">
+          "Protección que detecta amenazas antes de que causen daño. Sin invadir privacidad."
+        </blockquote>
+      </div>
+
+      <div class="project__capabilities">
+        <div class="capability">
+          <span class="capability__num">01</span>
+          <h5>Privacy-Preserving AI</h5>
+          <p>Inferencia on-device &lt;150ms. Cifrado homomórfico. Zero-knowledge proofs.</p>
+        </div>
+        <div class="capability">
+          <span class="capability__num">02</span>
+          <h5>Edge Intelligence</h5>
+          <p>Modelos &lt;2B parámetros. Cuantización INT4. &lt;3% batería/día.</p>
+        </div>
+        <div class="capability">
+          <span class="capability__num">03</span>
+          <h5>Federated Learning</h5>
+          <p>Mejora colaborativa del modelo sin centralizar datos sensibles.</p>
+        </div>
+        <div class="capability">
+          <span class="capability__num">04</span>
+          <h5>Adaptive Detection</h5>
+          <p>Graph neural networks. Behavioral modeling. Causal inference.</p>
+        </div>
+        <div class="capability">
+          <span class="capability__num">05</span>
+          <h5>Global Safety Infra.</h5>
+          <p>API-first. Cross-platform. Estándares abiertos.</p>
+        </div>
+        <div class="capability">
+          <span class="capability__num">06</span>
+          <h5>Neuro-Symbolic</h5>
+          <p>IA estadística + lógica formal. Verificación matemática de intervenciones críticas.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- LifeFirst -->
+    <article class="project" id="lifefirst" data-color="#7a8c6e">
+      <div class="project__header">
+        <div class="project__meta">
+          <span class="project__index">03.04</span>
+          <span class="project__status"><span class="project__status-dot"></span>Validación final</span>
+        </div>
+        <h3 class="project__name">LifeFirst®</h3>
+        <p class="project__tagline">Plataforma inteligente de acompañamiento emocional diario</p>
+      </div>
+
+      <div class="project__hero">
+        <div class="project__image-frame">
+          <div class="project__image" data-src="assets/img/scenes/03-research/lifefirst/hero.jpg" style="background: linear-gradient(135deg, #0f1a15 0%, #2d4a3a 50%, #0a0a0c 100%);">
+            <span class="project__image-placeholder"><img src="assets/img/scenes/03-research/lifefirst/lifefirst.png" alt="LifeFirst interfaz emocional" class="project__image" loading="lazy"></span>
+          </div>
+        </div>
+        <blockquote class="project__quote">
+          "No es un diario digital. Es un compañero que construye un perfil emocional longitudinal."
+        </blockquote>
+      </div>
+
+      <div class="project__body">
+        <div class="project__column">
+          <h4 class="project__section-title">Cinco pilares</h4>
+          <p>Detección diaria de ánimo mediante análisis semántico. Identificación de patrones emocionales antes de que se vuelvan problemas. Recomendaciones de ejercicios validados. Sesiones interactivas de gratitud y mindfulness. Visualización de evolución con métricas longitudinales.</p>
+        </div>
+        <div class="project__column">
+          <h4 class="project__section-title">Base científica</h4>
+          <p>Psicología cognitiva, terapia conductual, mindfulness, psiquiatría moderna, psicología positiva y ciencias del comportamiento. Cada ejercicio, sugerencia y patrón de intervención está respaldado por investigación revisada por pares. LifeFirst® complementa — no reemplaza — el trabajo con profesionales de salud mental.</p>
+        </div>
+      </div>
+
+      <div class="project__privacy-note">
+        <strong>Privacidad por diseño.</strong> Datos cifrados con estándares de grado militar. Solo el usuario tiene acceso a su información — ni siquiera el equipo de Abundia puede leerla. Retención controlada por preferencias del usuario.
+      </div>
+    </article>
+
+    <!-- Poket Pet -->
+    <article class="project" id="poketpet" data-color="#b5724a">
+      <div class="project__header">
+        <div class="project__meta">
+          <span class="project__index">03.05</span>
+          <span class="project__status"><span class="project__status-dot"></span>Infraestructura clínica</span>
+        </div>
+        <h3 class="project__name">Poket Pet®</h3>
+        <p class="project__tagline">Pet Digital Passport — Infraestructura de identidad clínica animal</p>
+      </div>
+
+      <div class="project__hero">
+        <div class="project__image-frame">
+          <div class="project__image" data-src="assets/img/scenes/03-research/poketpet/hero.jpg" style="background: linear-gradient(135deg, #1a120a 0%, #4a2d18 50%, #0a0a0c 100%);">
+            <span class="project__image-placeholder"><img src="assets/img/scenes/03-research/poketpet/poketpet.png" alt="Poket Pet timeline medica" class="project__image" loading="lazy"></span>
+          </div>
+        </div>
+        <blockquote class="project__quote">
+          "No es una app bonita para mascotas. Es el sistema operativo de la salud animal moderna."
+        </blockquote>
+      </div>
+
+      <div class="project__passport">
+        <div class="passport__card">
+          <div class="passport__header">
+            <span class="passport__label">PET DIGITAL PASSPORT</span>
+            <span class="passport__pet-id">🐾 PetID-2026-00481</span>
+          </div>
+          <div class="passport__qr">
+            <div class="passport__qr-state passport__qr-state--green">
+              <span>Normal</span>
+            </div>
+            <div class="passport__qr-state passport__qr-state--yellow">
+              <span>Perdido</span>
+            </div>
+            <div class="passport__qr-state passport__qr-state--red">
+              <span>Emergencia</span>
+            </div>
+          </div>
+          <p class="passport__footnote">El pasaporte pertenece al animal, no a la clínica. Persistente de por vida, transferible, verificable, interoperable.</p>
+        </div>
+      </div>
+
+      <div class="project__body">
+        <div class="project__column">
+          <h4 class="project__section-title">Núcleo</h4>
+          <p>Expediente médico longitudinal donde cada dato tiene valor, fecha, fuente y nivel de confianza. Timeline médica como "Google Maps de la salud": los veterinarios piensan en qué le ha pasado al animal en el tiempo, no en formularios. QR dinámico que cambia según el modo operativo: normal, perdido o emergencia.</p>
+        </div>
+        <div class="project__column">
+          <h4 class="project__section-title">Arquitectura clínica</h4>
+          <p>Multi-tenant familiar con RBAC clínico (Owner, Vet, Assistant, Caregiver, Viewer). Motor de reglas médicas predictivas. Workflow hospitalario real. IA veterinaria contextual que recuerda historial y previene reacciones adversas conocidas. Integración B2B2C: clínicas obtienen EHR profesional, dueños obtienen acceso gratuito.</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============================================
+       SCENE 04 — PRODUCCIÓN
+  ============================================= -->
+  <section id="produccion" class="scene scene--produccion" data-scene-name="04 — Producción">
+    <div class="produccion__header">
+      <span class="produccion__tag">04 · Sistemas operando</span>
+      <h2 class="produccion__title" data-split>Lo que ya está en el mundo.</h2>
+      <p class="produccion__lead">Tres sistemas que operan fuera del laboratorio: uno es el ecosistema padre, otro asiste en operaciones astronómicas, el tercero convierte el consumo en ritual social medible.</p>
+    </div>
+
+    <div class="produccion__grid">
+      <!-- Abundia -->
+      <article class="production" data-color="#f2efe8">
+        <div class="production__number">04.01</div>
+        <h3 class="production__name">Abundia</h3>
+        <p class="production__role">Ecosistema tecnológico padre</p>
+        <p class="production__desc">La capa que contiene a todos los proyectos anteriores. Servicios de hosting, Abundia Labs para investigación, infraestructura compartida y producción creativa. No es un producto: es el sustrato operativo desde el que se construyen los demás sistemas.</p>
+        <a href="https://abundia.io" target="_blank" rel="noopener" class="production__link" data-cursor="Abrir sitio">
+          <span>abundia.io</span>
+          <span class="production__link-arrow">→</span>
+        </a>
+      </article>
+
+      <!-- Astraibot -->
+      <article class="production" data-color="#a88556">
+        <div class="production__number">04.02</div>
+        <h3 class="production__name">Astraibot</h3>
+        <p class="production__role">Asistencia técnica especializada</p>
+        <p class="production__desc">Sistema de asistencia automatizada para operaciones técnicas. Integración con flujos de trabajo existentes, orquestación de tareas repetitivas y escalabilidad bajo demanda. Capa intermedia entre la infraestructura de Abundia y los usuarios operativos.</p>
+        <a href="https://astraibot.com" target="_blank" rel="noopener" class="production__link" data-cursor="Abrir sitio">
+          <span>astraibot.com</span>
+          <span class="production__link-arrow">→</span>
+        </a>
+      </article>
+
+      <!-- MOYOFY -->
+      <article class="production production--featured" data-color="#e91e63">
+        <div class="production__number">04.03</div>
+        <h3 class="production__name">MOYOFY</h3>
+        <p class="production__role">Plataforma de gamificación social para bares, nightlife y eventos</p>
+        <p class="production__desc">Convierte la música y el consumo en una experiencia participativa medible. Economía digital MOYOS: moneda virtual que incentiva votar, agregar canciones, comprar consumiciones. Misiones y logros. Regalos animados. Ranking en tiempo real visible en teléfonos y pantallas del local. Dashboard PRO para control total de estadísticas por mesa y promociones.</p>
+        <a href="https://moyofy.abundia.io" target="_blank" rel="noopener" class="production__link" data-cursor="Abrir plataforma">
+          <span>moyofy.abundia.io</span>
+          <span class="production__link-arrow">→</span>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SCENE 05 — MEDIA HUB
+  ============================================= -->
+  <section id="media" class="scene scene--media" data-scene-name="05 — Media Hub">
+    <div class="media__header">
+      <span class="media__tag">05 · Laboratorio visual</span>
+      <h2 class="media__title" data-split>Producción audiovisual y dirección creativa.</h2>
+      <p class="media__lead">Piezas que operan en paralelo a los sistemas de producto: dirección de arte, narrativa visual, producción ejecutiva. Una dimensión distinta del mismo oficio.</p>
+    </div>
+
+    <div class="media__filters">
+      <button class="media__filter is-active" data-filter="all">Todas</button>
+      <button class="media__filter" data-filter="direction">Dirección</button>
+      <button class="media__filter" data-filter="production">Producción</button>
+      <button class="media__filter" data-filter="strategy">Estrategia</button>
+    </div>
+
+    <div class="media__grid">
+      <article class="media-item" data-category="direction" data-color="#d4a85c">
+        <div class="media-item__image" style="background: linear-gradient(135deg, #2a1f15 0%, #4a3520 100%);">
+          <span class="media-item__placeholder">[ still · dirección ]</span>
+        </div>
+        <div class="media-item__body">
+          <span class="media-item__year">2025</span>
+          <h4 class="media-item__title">Proyecto audiovisual I</h4>
+          <p class="media-item__type">Dirección</p>
+        </div>
+      </article>
+
+      <article class="media-item" data-category="production" data-color="#c9483d">
+        <div class="media-item__image" style="background: linear-gradient(135deg, #2a0f0a 0%, #4a1810 100%);">
+          <span class="media-item__placeholder">[ still · producción ]</span>
+        </div>
+        <div class="media-item__body">
+          <span class="media-item__year">2025</span>
+          <h4 class="media-item__title">Proyecto audiovisual II</h4>
+          <p class="media-item__type">Producción</p>
+        </div>
+      </article>
+
+      <article class="media-item" data-category="strategy" data-color="#2d4a6f">
+        <div class="media-item__image" style="background: linear-gradient(135deg, #0a1828 0%, #1a2f4a 100%);">
+          <span class="media-item__placeholder">[ still · estrategia ]</span>
+        </div>
+        <div class="media-item__body">
+          <span class="media-item__year">2024</span>
+          <h4 class="media-item__title">Proyecto audiovisual III</h4>
+          <p class="media-item__type">Estrategia</p>
+        </div>
+      </article>
+
+      <article class="media-item" data-category="direction" data-color="#7a8c6e">
+        <div class="media-item__image" style="background: linear-gradient(135deg, #0f1a15 0%, #1a3025 100%);">
+          <span class="media-item__placeholder">[ still · dirección ]</span>
+        </div>
+        <div class="media-item__body">
+          <span class="media-item__year">2024</span>
+          <h4 class="media-item__title">Proyecto audiovisual IV</h4>
+          <p class="media-item__type">Dirección</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SCENE 06 — MÉTODO
+  ============================================= -->
+  <section id="metodo" class="scene scene--metodo" data-scene-name="06 — Método">
+    <div class="metodo__inner">
+      <div class="metodo__header">
+        <span class="metodo__tag">06 · Estratos</span>
+        <h2 class="metodo__title" data-split>No trabajo en sprints.<br/>Trabajo en estratos.</h2>
+      </div>
+
+      <div class="metodo__strata">
+        <div class="stratum" data-depth="4">
+          <span class="stratum__num">IV</span>
+          <div class="stratum__content">
+            <h3>Evolución</h3>
+            <p>Lo que muta. Detección de drift, shadow testing, A/B testing controlado, rollback automático. Los sistemas no se terminan: se mantienen vivos.</p>
+          </div>
+        </div>
+        <div class="stratum" data-depth="3">
+          <span class="stratum__num">III</span>
+          <div class="stratum__content">
+            <h3>Sistemas</h3>
+            <p>Lo que opera. Agentes, pipelines, colas de mensajes, motores de inferencia. Componentes que pueden reemplazarse sin colapsar el conjunto.</p>
+          </div>
+        </div>
+        <div class="stratum" data-depth="2">
+          <span class="stratum__num">II</span>
+          <div class="stratum__content">
+            <h3>Arquitectura</h3>
+            <p>Lo que sostiene. Capas, contratos, interfaces inmutables. Separación estricta de responsabilidades. Orquestación sobre centralización.</p>
+          </div>
+        </div>
+        <div class="stratum" data-depth="1">
+          <span class="stratum__num">I</span>
+          <div class="stratum__content">
+            <h3>Principios</h3>
+            <p>Lo que no cambia. Memoria, ética, gobernanza. La capa fundacional que sobrevive a cualquier reescritura técnica.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SCENE 07 — CORRESPONDENCIA
+  ============================================= -->
+  <section id="contacto" class="scene scene--contacto" data-scene-name="07 — Correspondencia">
+    <div class="contacto__inner">
+      <div class="contacto__letter">
+        <span class="contacto__stamp">Correspondencia · 2026</span>
+        <h2 class="contacto__title" data-split>Si llegaste hasta aquí,</h2>
+        <p class="contacto__body" data-split>
+          probablemente estás construyendo algo que necesita memoria, ética o infraestructura. <br/>Hablemos.
+        </p>
+      </div>
+
+      <div class="contacto__channels">
+        <a href="mailto:sebastian@abundia.io" class="contacto__channel" data-cursor="Email directo">
+          <div class="contacto__channel-icon">
+            <img src="assets/img/ui/mail.svg" alt="" onerror="this.style.display='none'">
+          </div>
+          <div class="contacto__channel-body">
+            <span class="contacto__channel-label">Para un proyecto</span>
+            <span class="contacto__channel-value">sebastian@abundia.io</span>
+            <span class="contacto__channel-desc">Propuestas, briefs, colaboraciones de infraestructura.</span>
+          </div>
+          <span class="contacto__channel-arrow">→</span>
+        </a>
+
+        <a href="https://wa.me/50662667997" target="_blank" rel="noopener" class="contacto__channel" data-cursor="Conversación">
+          <div class="contacto__channel-icon">
+            <img src="assets/img/ui/whats.svg" alt="" onerror="this.style.display='none'">
+          </div>
+          <div class="contacto__channel-body">
+            <span class="contacto__channel-label">Para conversar</span>
+            <span class="contacto__channel-value">WhatsApp</span>
+            <span class="contacto__channel-desc">Intercambios informales, ideas, exploraciones.</span>
+          </div>
+          <span class="contacto__channel-arrow">→</span>
+        </a>
+
+        <a href="https://t.me/" target="_blank" rel="noopener" class="contacto__channel" data-cursor="Telegram">
+          <div class="contacto__channel-icon">
+            <img src="assets/img/ui/tele.svg" alt="" onerror="this.style.display='none'">
+          </div>
+          <div class="contacto__channel-body">
+            <span class="contacto__channel-label">Para una colaboración</span>
+            <span class="contacto__channel-value">Telegram</span>
+            <span class="contacto__channel-desc">Investigación, open source, contribuciones técnicas.</span>
+          </div>
+          <span class="contacto__channel-arrow">→</span>
+        </a>
+      </div>
+
+      <footer class="contacto__footer">
+        <div class="contacto__footer-line">
+          <span>Sebastián Carabaguíaz</span>
+          <span>Creative Technologist</span>
+        </div>
+        <div class="contacto__footer-terminal">
+          <span class="umbral__prompt">&gt;</span>
+          <span>substrate.idle</span>
+          <span class="umbral__cursor">_</span>
+        </div>
+        <div class="contacto__copyright">
+          <span>© 2026 — Sebastián Carabaguíaz</span>
+          <span class="easter-egg-trigger" title="Konami para proyecto secreto">v.2026.08.15</span>
+        </div>
+      </footer>
+    </div>
+  </section>
+
+  <!-- Easter egg reveal -->
+  <div class="easter-egg" aria-hidden="true">
+    <div class="easter-egg__inner">
+      <span class="easter-egg__label">Proyecto no listado</span>
+      <h3>Proyecto-7</h3>
+      <p>En construcción. Disponible en una conversación.</p>
+      <button class="easter-egg__close" aria-label="Cerrar">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Main script -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
